@@ -1,0 +1,21 @@
+{
+  "mainTitle": "Encontre o equivalente dos medicamentos que você conhece, em qualquer lugar do mundo .",
+  "mainDescription": "Mais saúde e segurança nas suas viagens. Busque medicamentos equivalentes, confira indicações de uso, e fique tranquilo sabendo que está tomando o que é certo.",
+  "mainButtonCta": "Começar agora!",
+  "drawerSaibaMais": {
+    "title": "Saiba Mais",
+    "description": "Veja o funcionamento geral.",
+    "infos": [
+      {
+        "id": 1,
+        "title": "Busque pelo medicamento que você conhece",
+        "description": "Digite o nome do medicamento que você utiliza no Brasil, como Dipirona ou Neosaldina, e nossa tecnologia encontrará os equivalentes no país onde você está."
+      },
+      {
+        "id": 2,
+        "title": "Compare composições químicas",
+        "description": "Veja os detalhes dos medicamentos equivalentes, incluindo a composição química e as indicações de uso, para garantir que você estará usando a opção correta e segura."
+      }
+    ]
+  }
+}
