@@ -19,18 +19,19 @@ app.listen(port, () => {
   console.log('started')
 })
 
+
 const baseURL = env.NODE_ENV === 'production' ? 'https://equivalents-medicines.onrender.com' : 'http://localhost:3000'
 
-app.post(`${baseURL}/api/equivalente`, async (req, res) => {
+app.post(`${baseURL}/api/search`, async (req, res) => {
   try {
-    const equivalenteSchemaBody = z.object({
+    const searchMedicationSchemaBody = z.object({
       medication: z.string({
         message: 'O campo de medicamento é obrigatório!'
       }),
       country: z.string().optional()
     })
 
-    const { medication, country } = equivalenteSchemaBody.parse(req.body)
+    const { medication, country } = searchMedicationSchemaBody.parse(req.body)
 
     const response = await client.chat(
       {
@@ -60,3 +61,5 @@ app.post(`${baseURL}/api/equivalente`, async (req, res) => {
     }
   }
 })
+
+export default app
