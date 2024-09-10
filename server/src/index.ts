@@ -15,7 +15,9 @@ const port = env.PORT || 3000
 
 app.use(express.json())
 app.use(cors())
-app.listen(port)
+app.listen(port, () => {
+  console.log('started')
+})
 
 app.post('/api/equivalente', async (req, res) => {
   try {
