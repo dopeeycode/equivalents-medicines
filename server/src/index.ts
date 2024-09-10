@@ -19,7 +19,9 @@ app.listen(port, () => {
   console.log('started')
 })
 
-app.post('/api/equivalente', async (req, res) => {
+const baseURL = env.NODE_ENV === 'production' ? 'https://equivalents-medicines.onrender.com' : 'http://localhost:3000'
+
+app.post(`${baseURL}/api/equivalente`, async (req, res) => {
   try {
     const equivalenteSchemaBody = z.object({
       medication: z.string({
