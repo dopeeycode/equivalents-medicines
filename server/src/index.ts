@@ -20,7 +20,7 @@ app.listen(port, () => {
 })
 
 
-const baseURL = env.NODE_ENV === 'production' ? 'https://equivalents-medicines-wzt9-wheat.vercel.app' : 'http://localhost:3000'
+const baseURL = env.NODE_ENV === 'production' ? 'https://equivalents-medicines-api.vercel.app' : 'http://localhost:3000'
 
 app.post(`${baseURL}/api/search`, async (req, res) => {
   try {
