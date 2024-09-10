@@ -8,7 +8,8 @@ export default {
   			sans: ['Plus Jakarta Sans', 'sans-serif']
   		},
 			backgroundImage: {
-        'dots': "url('assets/dots2.png')"
+        'dots': "url('assets/dots2.png')",
+        'dots2': "url('assets/dots.png')"
       },
   		borderRadius: {
   			lg: 'var(--radius)',

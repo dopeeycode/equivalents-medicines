@@ -1,11 +1,11 @@
-export const generatePrompt = (medicamento: string, pais?: string): string => {
+export const generatePrompt = (medication: string, country?: string): string => {
   return `Você é um assistente especializado em farmacologia internacional. Um usuário brasileiro está procurando equivalentes internacionais para um medicamento brasileiro. 
 
-Medicamento brasileiro: ${medicamento}
+Medicamento brasileiro: ${medication}
 
 Por favor, forneça as seguintes informações:
 
-1. Liste 3 medicamentos equivalentes disponíveis internacionalmente, preferencialmente no ${pais ? pais : 'Estados Unidos'}.
+1. Liste 3 medicamentos equivalentes disponíveis internacionalmente, preferencialmente no ${country ? country : 'Estados Unidos'}.
 2. Para cada medicamento equivalente, inclua:
    a) Nome comercial
    b) Princípio ativo

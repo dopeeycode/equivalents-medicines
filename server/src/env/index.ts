@@ -3,7 +3,7 @@ import 'dotenv/config'
 
 const envSchema = z.object({
   COHERE_API_KEY: z.string(),
-  PORT: z.coerce.number().default(3000)
+  PORT: z.coerce.number().default(3333)
 })
 
 const _env = envSchema.safeParse(process.env)

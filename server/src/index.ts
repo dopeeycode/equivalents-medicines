@@ -11,35 +11,28 @@ import z, { ZodError } from 'zod'
 const client = new CohereClient({ token: env.COHERE_API_KEY });        
 
 const app = express()
-const port = process.env.PORT || 3000
+const port = env.PORT || 3000
 
 app.use(express.json())
 app.use(cors())
-app.listen(port, () => {
-  console.log('Server running')
-});
-
+app.listen(port)
 
 app.post('/api/equivalente', async (req, res) => {
   try {
     const equivalenteSchemaBody = z.object({
-      medicamento: z.string({
+      medication: z.string({
         message: 'O campo de medicamento é obrigatório!'
       }),
-      pais: z.string().optional()
+      country: z.string().optional()
     })
 
-    const { medicamento, pais } = equivalenteSchemaBody.parse(req.body)
-
-    if (!medicamento) {
-      return res.status(400).json({ error: 'O nome do medicamento é obrigatório!' })
-    }
+    const { medication, country } = equivalenteSchemaBody.parse(req.body)
 
     const response = await client.chat(
       {
-        message: medicamento,
+        message: medication,
         model: "command-r-plus",
-        preamble: generatePrompt(medicamento, pais),
+        preamble: generatePrompt(medication, country),
       }
     )
 
