@@ -8,8 +8,7 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "start": "node dist/index.js",
-    "build": "tsup src",
-    "vercel-build": "echo hello"
+    "build": "tsup src"
   },
   "keywords": [],
   "author": "",

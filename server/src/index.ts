@@ -20,9 +20,7 @@ app.listen(port, () => {
 })
 
 
-const baseURL = env.NODE_ENV === 'production' ? 'https://equivalents-medicines-api.vercel.app' : 'http://localhost:3000'
-
-app.post(`${baseURL}/api/search`, async (req, res) => {
+app.post("/api/search", async (req, res) => {
   try {
     const searchMedicationSchemaBody = z.object({
       medication: z.string({
